@@ -20,11 +20,14 @@
             font-family: "Comic Neue";
             color:black;
         }
+        p{
+            font-family: "Comic Neue";
+            color:black;
+        }
     </style>
 </head>
 <body>
     <center>
-        <h2 id="greet"></h2>
         <h1>Shrek.</h1>
         <img alt="shrek screaming." src="green.jpg" width="500px">
         <h2>Description</h2>
@@ -32,14 +35,20 @@
         <h2>Theme Song</h2>
         <img src="Untitled.png" width="500px">
         <br>
-        <!--<p>type something down here</p>-->
-        <!--<textarea name="name" id="greet" rows="1"></textarea></textarea>-->
+        <p>type something down here</p>
+        <textarea name="name" id="shrekinator" rows="1"></textarea></textarea>
+        <button onclick="storeInput()">click me</button>
+        <br>
+        <p id="output"></p>
+        <br>
+
     </center>
     <script>
         alert("shrek.");
-        var a=prompt("Type Something.");
-        document.getElementById("greet").innerHTML = "hello "+a+" I'm shrek."
-
+        function storeInput(){
+            var typedValue = document.getElementById("shrekinator").value;
+            document.getElementById("output").innerText = "hello "+typedValue+" i'm shrek";
+        }
     </script>
 </body>
 </html>
